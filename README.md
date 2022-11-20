@@ -33,6 +33,15 @@
 
 ## Kubernetes
 
+### リソース
+- kubernetesオブジェクト（Pod、Serviceなど）のこと
+- k8sではリソースを作成・登録することでコンテナの実行などを行う
+- 主なリソース
+  - Pod, ReplicaSet, Deployment
+  - NameSpace
+  - Service, Ingress
+- リソースは、マニフェストファイルで定義する（yamlやjson）
+
 ### namespace
 - namespaceを使って１つのkubernetesクラスタを仮想的に分割することができる
 - デフォルトで下記が用意されている
@@ -48,3 +57,17 @@ kubectl create namespace $USER // 自分の名前のnamespaceを作成
 // namespaceの一覧を取得
 kubectl get namespace
 ```
+
+### コンテキスト
+- 接続先のクラスタ情報とユーザの認証情報、namespaceをセットにしたもの
+- コンテキストを切り替えることで、操作するクラスタを変更できる
+
+```
+// コンテキストの設定
+kubectl config set-context $(kubectl config current-context) --namespace=$USER
+
+// コンテキストの確認
+kubectl config get-contextx
+```
+
+### Pod
