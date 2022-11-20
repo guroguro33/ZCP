@@ -71,3 +71,20 @@ kubectl config get-contextx
 ```
 
 ### Pod
+- 操作コマンド
+```
+// podをデプロイ
+kubectl create -f hello-pod.yaml
+
+// podの一覧表示
+kubectl get pods
+
+// podの詳細表示
+kubectl describe pod hello-pod
+
+// ログ確認（最新）
+kubectl logs hello-pod -f
+
+// podの削除
+kubectl delete pod hello-pod
+```
