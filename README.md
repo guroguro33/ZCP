@@ -88,3 +88,30 @@ kubectl logs hello-pod -f
 // podの削除
 kubectl delete pod hello-pod
 ```
+
+### Deployment
+
+#### Deployment
+- ReplicaSetを生成、管理しローリングアップデートやロールバックといったデプロイ管理を行います。
+
+#### ReplicaSet
+- 同じ仕様のPodのレプリカ数を管理します。
+
+#### Pod
+- デプロイの最小単位
+- 1つ以上のコンテナをまとめたもの
+
+#### コマンド例
+```
+// デプロイ
+kubectl apply -f deployment.yaml
+
+// 確認
+kubectl get deployment java-sample-spring-ga
+kubectl get pods,deployment,rs // rsはReplicaSetのこと
+
+// 詳細確認
+
+// デプロイ
+kubectl describe pods --selector=app=java-sample-spring-ga // ラベル名でフィルタリング
+```
