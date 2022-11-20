@@ -30,3 +30,21 @@
 2. 接続先Blackpearlサーバを設定
 3. Blackpearlのコンテキストの設定、向き先を切り替え
 4. ZCPへログイン
+
+## Kubernetes
+
+### namespace
+- namespaceを使って１つのkubernetesクラスタを仮想的に分割することができる
+- デフォルトで下記が用意されている
+  - kube-system
+  - kube-public
+  - default
+
+#### コマンド
+```
+// namespaceの作成
+kubectl create namespace $USER // 自分の名前のnamespaceを作成
+
+// namespaceの一覧を取得
+kubectl get namespace
+```
