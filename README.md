@@ -110,8 +110,6 @@ kubectl apply -f deployment.yaml
 kubectl get deployment java-sample-spring-ga
 kubectl get pods,deployment,rs // rsはReplicaSetのこと
 
-// 詳細確認
-
-// デプロイ
+// 詳細確認（Pod）
 kubectl describe pods --selector=app=java-sample-spring-ga // ラベル名でフィルタリング
 ```
