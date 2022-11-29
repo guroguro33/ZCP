@@ -113,3 +113,11 @@ kubectl get pods,deployment,rs // rsはReplicaSetのこと
 // 詳細確認（Pod）
 kubectl describe pods --selector=app=java-sample-spring-ga // ラベル名でフィルタリング
 ```
+
+### Ingress
+- L7ロードバランサー
+- バーチャルホストやパスによる振り分けを実現
+
+### Service
+- L4ロードバランサー
+- Podに対するアクセスを分散させる
