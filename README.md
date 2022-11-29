@@ -121,3 +121,5 @@ kubectl describe pods --selector=app=java-sample-spring-ga // ラベル名でフ
 ### Service
 - L4ロードバランサー
 - Podに対するアクセスを分散させる
+
+<img width="1050" alt="スクリーンショット 2022-11-29 13 57 26" src="https://user-images.githubusercontent.com/48667277/204442611-a1480d8b-4e1a-457c-b8b7-f0969ce6987e.png">
