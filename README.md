@@ -143,12 +143,15 @@ spec:
  - 各Podの固有IPはそれだけでは外部公開されない
  - IngressやServiceを使うことによって外部からトラフィックを受けることができる
  - Service Typeを指定することで公開方法を指定できる
- 　 - ClusterIP
- 　   - ClusterIPと呼ばれるクラスタ内でのみ有効なIPアドレスを公開（デフォルト）
-   - NodePort
- 　　  - ノードにランダムに割り当てられるポートを使って公開
- 　　  - ClusterIPが自動的に作られます
-   - LoadBalancer
-   　　- クラウドプロバイダと連携し外部のロードバランサを設定し、公開します。 
-   　　- NodePortとClusterIPが自動的に作られます
-   　　- ZCPではセキュリティ上、作成ができません
+ 
+##### ClusterIP
+ - ClusterIPと呼ばれるクラスタ内でのみ有効なIPアドレスを公開（デフォルト）
+
+##### NodePort
+ - ノードにランダムに割り当てられるポートを使って公開
+ - ClusterIPが自動的に作られます
+
+##### LoadBalancer
+ - クラウドプロバイダと連携し外部のロードバランサを設定し、公開します。 
+ - NodePortとClusterIPが自動的に作られます
+ - ZCPではセキュリティ上、作成ができません
