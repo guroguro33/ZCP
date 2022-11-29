@@ -138,3 +138,17 @@ spec:
 ```
 
 <img width="1050" alt="スクリーンショット 2022-11-29 13 57 26" src="https://user-images.githubusercontent.com/48667277/204442611-a1480d8b-4e1a-457c-b8b7-f0969ce6987e.png">
+
+　#### Service Type
+ - 各Podの固有IPはそれだけでは外部公開されない
+ - IngressやServiceを使うことによって外部からトラフィックを受けることができる
+ - Service Typeを指定することで公開方法を指定できる
+ 　 - ClusterIP
+ 　   - ClusterIPと呼ばれるクラスタ内でのみ有効なIPアドレスを公開（デフォルト）
+   - NodePort
+ 　　  - ノードにランダムに割り当てられるポートを使って公開
+ 　　  - ClusterIPが自動的に作られます
+   - LoadBalancer
+   　　- クラウドプロバイダと連携し外部のロードバランサを設定し、公開します。 
+   　　- NodePortとClusterIPが自動的に作られます
+   　　- ZCPではセキュリティ上、作成ができません
